@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Portofolio Ahmad Zaelani - Web Developer" />
+    <title>Portofolio - Ahmad Zaelani</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/output.css" />
+    <script>
+      (() => {
+        const s = localStorage.getItem("portfolio-theme");
+        document.documentElement.classList.toggle(
+          "dark",
+          s ? s === "dark" : matchMedia("(prefers-color-scheme: dark)").matches,
+        );
+      })();
+    </script>
+  </head>
+  <body
+    class="bg-slate-50 text-slate-800 antialiased transition-colors dark:bg-[#080d18] dark:text-slate-200"
+  >
+    <header
+      class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/70 bg-white/85 backdrop-blur-xl dark:border-white/10 dark:bg-[#080d18]/90"
+    >
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+        <a href="#home" class="font-display text-xl font-bold text-slate-950 dark:text-white"
+          ><span class="text-blue-600">&lt;</span>Ahmad Zaelani<span class="text-blue-600"
+            >/&gt;</span
+          ></a
+        >
+        <div class="hidden gap-6 text-sm font-semibold md:flex">
+          <a class="nav" href="#about">Tentang</a><a class="nav" href="#skills">Keahlian</a
+          ><a class="nav" href="#portfolio">Portofolio</a
+          ><a class="nav" href="#experience">Pengalaman</a
+          ><a class="nav" href="#contact">Kontak</a>
+        </div>
+        <div class="flex gap-2">
+          <button
+            id="theme"
+            aria-label="Ganti tema"
+            class="rounded-xl border border-slate-200 bg-white p-2.5 dark:border-white/10 dark:bg-white/5"
+          >
+            <span id="theme-icon">☾</span></button
+          ><button
+            id="menu-btn"
+            class="rounded-xl border border-slate-200 px-3 md:hidden dark:border-white/10"
+          >
+            ☰
+          </button>
+        </div>
+      </nav>
+      <div
+        id="mobile-menu"
+        class="hidden border-t border-slate-200 bg-white px-5 py-4 md:hidden dark:border-white/10 dark:bg-[#080d18]"
+      >
+        <div class="grid grid-cols-2 gap-4 text-sm">
+          <a class="nav" href="#about">Tentang</a><a class="nav" href="#skills">Keahlian</a
+          ><a class="nav" href="#portfolio">Portofolio</a
+          ><a class="nav" href="#experience">Pengalaman</a
+          ><a class="nav" href="#education">Pendidikan</a><a class="nav" href="#blog">Blog</a
+          ><a class="nav" href="#contact">Kontak</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="home" class="relative overflow-hidden pt-36 pb-24 sm:pt-44">
+        <div
+          class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-100 via-transparent to-transparent dark:from-blue-950/60"
+        ></div>
+        <div class="mx-auto grid max-w-6xl items-center gap-14 px-5 lg:grid-cols-[1.2fr_.8fr]">
+          <div>
+            <!-- <span class="rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-xs font-bold tracking-wider text-blue-700 dark:border-blue-400/20 dark:bg-blue-400/10 dark:text-blue-300">● TERBUKA UNTUK PELUANG .NET</span> -->
+            <p class="mt-8 font-semibold text-blue-700 dark:text-blue-300">
+              <span id="intro-greeting" aria-label="Halo, saya">Halo, saya</span>
+            </p>
+            <h1
+              class="font-display mt-2 text-5xl font-bold tracking-tight text-slate-950 sm:text-7xl dark:text-white"
+            >
+              [Ahmad Zaelani]<span class="text-blue-600">.</span>
+            </h1>
+            <h2 class="font-display mt-5 text-2xl font-semibold sm:text-3xl">Web Developer</h2>
+            <p class="mt-6 max-w-2xl leading-8 text-slate-600 dark:text-slate-400">
+              membangun aplikasi web terstruktur dan perangkat lunak yang mudah
+              dipelihara.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a class="primary" href="#portfolio">Lihat Karya Saya ↗</a
+              ><a class="secondary" href="#contact">Hubungi Saya</a
+              ><a class="secondary" href="./assets/cv.pdf" download>Unduh CV ↓</a>
+            </div>
+            <div class="mt-10 flex flex-wrap gap-6 text-sm text-slate-500 dark:text-slate-400">
+              <span>⌖ Bekasi - Indonesia</span><span>⌘ Pengalaman 2 tahun</span
+              ><a href="mailto:azaelani170@gmail.com">✉ Kirim email</a>
+            </div>
+          </div>
+          <div class="mx-auto w-full max-w-sm">
+            <div
+              class="mx-auto aspect-square w-full max-w-[20rem] rounded-full bg-gradient-to-br from-blue-500 via-indigo-600 to-violet-700 p-2 shadow-2xl shadow-blue-600/25"
+            >
+              <div
+                class="h-full w-full overflow-hidden rounded-full border-4 border-white/80 bg-blue-50 dark:border-[#080d18] dark:bg-blue-950"
+              >
+                <img
+                  src="./dist/img/me.png"
+                  alt="Foto Ahmad Zaelani"
+                  class="h-full w-full object-cover object-center"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="heading">
+          <span class="eyebrow">KENALI SAYA</span>
+          <h2 class="h2">Tentang <em>Saya</em></h2>
+          <p class="desc">Sekilas tentang perjalanan saya sebagai pengembang perangkat lunak.</p>
+        </div>
+        <div class="grid gap-10 lg:grid-cols-[1.1fr_.9fr]">
+          <div class="space-y-5 text-[15px] leading-8 text-slate-600 dark:text-slate-400">
+            <p>
+              Saya seorang Web Developer dengan pengalaman 2 tahun dalam
+              mengembangkan dan memelihara aplikasi web untuk kebutuhan perusahaan/lembaga. Pekerjaan saya
+              mencakup pengembangan fungsi backend, REST API, penerapan aturan bisnis,
+              serta integrasi aplikasi dengan basis data dan layanan eksternal.
+            </p>
+            <p>
+              Memanfaatkan teknologi AI sebagai pendukung proses pengembangan, mengoptimalkan data dan kode, 
+              serta membangun komponen UI yang modular dan dapat digunakan kembali. Saya juga memanfaatkan AI 
+              untuk membantu eksplorasi solusi, meningkatkan produktivitas, dan mempercepat proses debugging 
+              tanpa mengesampingkan pemahaman teknis serta kualitas kode.
+            </p>
+            <p>
+              Tertarik pada Teknologi Terutama pengembangan Web secara Full Stack, 
+              arsitektur perangkat lunak dan pengujia aplikasi.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="stat"><b>2</b><span>Tahun pengalaman</span></div>
+            <div class="stat"><b>.NET, Flask, Spring Boot, Laravel</b><span>Ekosistem</span></div>
+            <div class="stat"><b>MudBlazor, Tailwind, Bootstrap</b><span>Frontend Framework</span></div>
+            <div class="stat"><b>ID</b><span>Berdomisili di Indonesia</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="heading">
+          <span class="eyebrow">TEKNOLOGI YANG SAYA GUNAKAN</span>
+          <h2 class="h2">Teknologi <em>Andalan</em></h2>
+          <p class="desc">
+            Peralatan dan teknologi yang saya gunakan dalam pekerjaan.
+          </p>
+        </div>
+        <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div class="card">
+            <div class="symbol">⌘</div>
+            <h3>Pengembangan Backend</h3>
+            <div class="chips">
+              <span>C#</span><span>.NET 9</span><span>ASP.NET Core</span><span>Minimal API</span
+              ><span>REST API</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="symbol">▣</div>
+            <h3>Pengembangan Frontend</h3>
+            <div class="chips">
+              <span>Blazor</span><span>Razor</span><span>MudBlazor</span><span>HTML</span
+              ><span>CSS</span><span>JavaScript</span><span>DevExpress</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="symbol">◫</div>
+            <h3>Basis Data</h3>
+            <div class="chips">
+              <span>MongoDB</span><span>PostgreSQL</span><span>Mysql</span
+              ><span>SQL Server</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="symbol">▤</div>
+            <h3>Pelaporan & Integrasi</h3>
+            <div class="chips">
+              <span>REPX</span><span>Penampil PDF</span><span>Alfresco</span
+              ><span>API Eksternal</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="symbol">⌁</div>
+            <h3>Peralatan & Lingkungan</h3>
+            <div class="chips">
+              <span>Git</span><span>GitLab</span>
+            </div>
+          </div>
+          <!-- <div class="card">
+            <div class="symbol">◉</div>
+            <h3>Pemantauan & Otomatisasi</h3>
+            <div class="chips">
+              <span>Grafana</span><span>Pandora FMS</span><span>Python</span><span>Playwright</span>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <section id="portfolio" class="section">
+        <div class="heading">
+          <span class="eyebrow">KARYA PILIHAN</span>
+          <h2 class="h2">Proyek <em>Unggulan</em></h2>
+          <p class="desc">
+            Ringkasan bidang aplikasi dan pekerjaan rekayasa perangkat lunak yang pernah saya
+            kontribusikan. Detail milik perusahaan tidak disertakan.
+          </p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2">
+          <article class="project">
+            <div class="visual bg-gradient-to-br from-blue-600 to-indigo-800">
+              <a
+                href="https://emp.bareskrim.polri.go.id/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Kunjungi situs Elektronik Manajemen Penyidikan"
+              >
+                <img
+                  src="./dist/img/emp.png"
+                  alt="Tampilan Elektronik Manajemen Penyidikan (EMP)"
+                  class="absolute inset-0 h-full w-full object-cover"
+                />
+              </a>
+              <small>01 / APLIKASI LEMBAGA</small>
+            </div>
+            <div class="p-6">
+              <h3>
+                <a
+                  href="https://emp.bareskrim.polri.go.id/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Elektronik Manajemen Penyidikan (EMP) ↗</a
+                >
+              </h3>
+              <p>
+                Kontribusi pada aplikasi web perusahaan untuk mendukung pengelolaan data kasus, alur
+                kerja administratif, dan dokumen.
+              </p>
+              <div class="chips">
+                <span>.NET 9</span><span>Blazor</span><span>MongoDB</span><span>MudBlazor</span
+                ><span>Devexpres</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="visual bg-gradient-to-br from-blue-600 to-indigo-800">
+              <!-- <a
+                href="https://emp.bareskrim.polri.go.id/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Kunjungi situs Elektronik Manajemen Penyidikan"
+              > -->
+                <img
+                  src="./dist/img/QB.png"
+                  alt="Query Builder"
+                  class="absolute inset-0 h-full w-full object-cover"
+                />
+              </a>
+              <small>02 / APLIKASI INTERNAL</small>
+            </div>
+            <div class="p-6">
+              <h3>
+                Query Builder
+              </h3>
+              <p>
+                Berkontribusi dalam pengembangan aplikasi web internal untuk menelusuri basis data serta mengefisienkan pelaporan operasional yang mencakup PostgreSQL, MySQL, dan Microsoft SQL Server.
+              </p>
+              <div class="chips">
+                <span>Python</span><span>Flask</span><span>tailwind</span><span>Mysql</span><span>SQL Server</span
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="mt-5 text-xs leading-6 text-slate-500">
+          Deskripsi proyek disederhanakan untuk melindungi sistem dan informasi rahasia. Deskripsi
+          ini menjelaskan bidang kontribusi, bukan kepemilikan atas keseluruhan produk.
+        </p>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="heading">
+          <span class="eyebrow">PERJALANAN SAYA</span>
+          <h2 class="h2">Pengalaman <em>Kerja</em></h2>
+          <p class="desc">
+            Pengalaman profesional dalam mengembangkan dan memelihara aplikasi perusahaan.
+          </p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="card">
+              <div class="flex flex-wrap justify-between gap-3">
+                <div>
+                  <h3>Web Developer</h3>
+                  <b class="text-blue-700 dark:text-blue-300">Media Telematika Jaya</b>
+                </div>
+                <span class="date">2024 – Sekarang</span>
+              </div>
+              <ul
+                class="mt-5 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-600 dark:text-slate-400"
+              >
+                <li>
+                  Mengembangkan dan memelihara aplikasi web menggunakan C#, .NET 9,
+                  ASP.NET Core, dan Blazor.
+                </li>
+                <li>
+                  Membangun endpoint REST menggunakan ASP.NET Core Minimal API dan menerapkan logika
+                  bisnis backend.
+                </li>
+                <li>
+                  Menggunakan MongoDB untuk pengambilan, penyaringan, proyeksi, dan
+                  penyimpanan data.
+                </li>
+                <li>
+                  Berkontribusi pada alur kerja dokumen, proses persetujuan, pelaporan, dan fitur
+                  pemantauan.
+                </li>
+                <li>
+                  Mengintegrasikan layanan aplikasi dengan sistem eksternal.
+                </li>
+                <li>
+                  Membangun fitur penelusuran basis data yang mencakup tabel, rekaman (record), 
+                  relasi skema, penomoran halaman (pagination), dan pengurutan data.
+                </li>
+                <li>
+                  Mengembangkan alat penyusun kueri JOIN secara visual dengan opsi pemilihan kolom, 
+                  jenis join, filter, pengurutan, dan penomoran halaman, serta fitur pencarian 
+                  tabel dan eksekusi kueri SELECT mentah (raw query).
+                </li>
+                <li>
+                  Mengintegrasikan laporan operasional—termasuk laporan integrasi SPPT-TI dan ringkasan 
+                  berdasarkan rentang tanggal—dengan dukungan ekspor ke format CSV dan Excel.
+                </li>
+                <li>
+                  Menangani alur masuk (login) aplikasi dan proses verifikasi menggunakan OTP.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="card">
+              <h3>Proyek Pribadi</h3>
+              <p class="mt-3 text-sm text-slate-500">
+                Membangun sistem otomatisasi pengumpulan data monitoring server 
+                menggunakan Python, Flask, dan Pandas. Sistem ini membantu menghasilkan laporan 
+                penggunaan CPU, RAM, dan Host Latency berdasarkan periode data yang di ambil dari Pandora FMS dan Grafana.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <div class="heading">
+          <span class="eyebrow">LATAR BELAKANG</span>
+          <h2 class="h2">Pendidikan & <em>Pembelajaran</em></h2>
+          <p class="desc">Latar belakang akademis dan proses belajar berkelanjutan.</p>
+        </div>
+        <div class="grid gap-5 md:grid-cols-2">
+          <div class="card">
+            <!-- <div class="symbol">▣</div> -->
+            <img
+              src="./dist/img/ubp.png"
+              alt="Logo Universitas Buana Perjuangan Karawang"
+              class="h-12 w-12 shrink-0 object-contain"
+            />
+            <h3>Pendidikan</h3>
+            <p>S1 Teknik Informatika</p>
+            <p class="text-sm text-slate-500">
+              <a
+                href="https://ubpkarawang.ac.id/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-3"
+              >
+                <span>Universitas Buana Perjuangan Karawang · 2022 ↗</span>
+              </a>
+            </p>
+          </div>
+          <div class="card">
+            <div class="symbol">⌁</div>
+            <h3>Belajar Berkelanjutan</h3>
+            <p>
+              Memperkuat dasar rekayasa perangkat lunak, desain API, pengujian,
+              arsitektur bersih.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section id="blog" class="section">
+        <div class="heading">
+          <span class="eyebrow">BERBAGI PENGETAHUAN</span>
+          <h2 class="h2">Blog <em>Teknis</em></h2>
+          <p class="desc">
+            Ruang untuk catatan teknis, pelajaran yang didapat, dan tulisan praktis seputar
+            pengembangan.
+          </p>
+        </div>
+        <div class="grid gap-5 md:grid-cols-3">
+          <article class="card">
+            <span class="eyebrow">ASP.NET CORE</span>
+            <h3 class="mt-3">Merancang Minimal API di ASP.NET Core</h3>
+            <p>
+              Catatan tentang pengorganisasian endpoint, validasi permintaan, dependency injection,
+              dan respons API.
+            </p>
+            <span class="mt-4 inline-block text-xs text-slate-500">Ide artikel · 5 menit baca</span>
+          </article>
+          <article class="card">
+            <span class="eyebrow">BASIS DATA</span>
+            <h3 class="mt-3">Menggunakan Agregasi MongoDB</h3>
+            <p>
+              Pengenalan praktis tentang penyaringan, proyeksi, pengelompokan, dan pembentukan
+              dokumen untuk respons API.
+            </p>
+            <span class="mt-4 inline-block text-xs text-slate-500">Ide artikel · 6 menit baca</span>
+          </article>
+          <article class="card">
+            <span class="eyebrow">BLAZOR</span>
+            <h3 class="mt-3">Membangun UI yang Dapat Digunakan Kembali dengan Blazor</h3>
+            <p>
+              Pelajaran tentang komposisi komponen, parameter, state, dan pola UI yang mudah
+              dipelihara.
+            </p>
+            <span class="mt-4 inline-block text-xs text-slate-500">Ide artikel · 4 menit baca</span>
+          </article>
+        </div>
+        <p class="mt-4 text-xs text-slate-500">
+          Topik ini masih berupa saran artikel, bukan artikel yang sudah diterbitkan. Ganti dengan
+          tulisan yang sebenarnya jika sudah tersedia.
+        </p>
+      </section> -->
+
+      <section id="contact" class="section pb-24">
+        <div
+          class="rounded-[2rem] bg-gradient-to-br from-blue-700 via-indigo-700 to-violet-800 px-7 py-14 text-center text-white shadow-xl sm:px-14"
+        >
+          <span class="text-xs font-bold tracking-[.25em] text-blue-200">HUBUNGI SAYA</span>
+          <h2 class="font-display mt-4 text-3xl font-bold sm:text-5xl">
+            Mari bangun sesuatu<br />
+            yang bermakna bersama.
+          </h2>
+          <p class="mx-auto mt-5 max-w-xl text-sm leading-7 text-blue-100">
+            Saya terbuka untuk berdiskusi tentang peluang pengembangan Web, proyek menarik, dan
+            kolaborasi. Silakan hubungi saya.
+          </p>
+          <a
+            href="mailto:azaelani170@gmail.com"
+            class="mt-8 inline-flex rounded-xl bg-white px-6 py-3 font-semibold text-blue-800 transition hover:-translate-y-1"
+            >Sapa Saya ↗</a
+          >
+          <div class="mt-8 flex justify-center gap-6 text-sm text-blue-100">
+            <a href="https://github.com/adzaelani" target="_blank" rel="noreferrer">GitHub ↗</a
+            ><a href="https://www.linkedin.com/in/ahmad-zaelani-1a065b209/" target="_blank" rel="noreferrer"
+              >LinkedIn ↗</a
+            ><a href="mailto:azaelani170@gmail.com">Email ↗</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="border-t border-slate-200 py-7 text-center text-xs text-slate-500 dark:border-white/10"
+    >
+      © <span id="year"></span> Ahmad Zaelani.
+    </footer>
+    <script src="https://unpkg.com/typeit@8.8.7/dist/index.umd.js"></script>
+    <script>
+      const root = document.documentElement,
+        btn = document.getElementById("theme"),
+        icon = document.getElementById("theme-icon");
+      if (
+        window.TypeIt &&
+        !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      ) {
+        new TypeIt("#intro-greeting", {
+          speed: 75,
+          startDelay: 250,
+          cursor: false,
+          waitUntilVisible: true,
+        })
+          // .type("Halo, saya")
+          .go();
+      }
+      function sync() {
+        icon.textContent = root.classList.contains("dark") ? "☀" : "☾";
+      }
+      sync();
+      btn.addEventListener("click", () => {
+        const dark = root.classList.toggle("dark");
+        localStorage.setItem("portfolio-theme", dark ? "dark" : "light");
+        sync();
+      });
+      document
+        .getElementById("menu-btn")
+        .addEventListener("click", () =>
+          document.getElementById("mobile-menu").classList.toggle("hidden"),
+        );
+      document
+        .querySelectorAll("#mobile-menu a")
+        .forEach((a) =>
+          a.addEventListener("click", () =>
+            document.getElementById("mobile-menu").classList.add("hidden"),
+          ),
+        );
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

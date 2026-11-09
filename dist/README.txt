@@ -1,0 +1,1 @@
+This folder receives output.css after running npm install && npm run build. GitHub Actions builds it automatically.
